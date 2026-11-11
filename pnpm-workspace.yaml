@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+  - packages/*
+
+saveExact: true
+strictDepBuilds: true
+allowBuilds: {}
