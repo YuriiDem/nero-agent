@@ -32,6 +32,9 @@
     "enabled": true,
     "rules": {
       "preset": "recommended",
+      "complexity": {
+        "useLiteralKeys": "off"
+      },
       "suspicious": {
         "noExplicitAny": "error",
         "noConsole": "error"
@@ -83,6 +86,16 @@
         "rules": {
           "suspicious": {
             "noConsole": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["packages/core/src/guard/sanitize-untrusted.ts", "packages/core/src/guard/*.test.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noControlCharactersInRegex": "off"
           }
         }
       }

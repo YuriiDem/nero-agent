@@ -1,0 +1,6 @@
+cases:
+  - name: claims proxy=false fires
+    subject: { kind: token, chain: ethereum }
+    facts:
+      token.is_proxy: false
+    expect: fires

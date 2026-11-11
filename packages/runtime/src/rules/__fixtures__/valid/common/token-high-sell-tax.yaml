@@ -1,0 +1,10 @@
+id: common.token.high_sell_tax
+title: High sell tax
+severity: high
+appliesTo:
+  kind: token
+when:
+  any:
+    - { fact: token.sell_tax, gte: 0.1 }
+    - { fact: token.buy_tax, gte: 0.1 }
+explain: A large share of every trade is taken as tax.
