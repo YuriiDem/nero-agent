@@ -1,0 +1,10 @@
+id: evm.token.honeypot
+title: Token cannot be sold
+severity: critical
+appliesTo:
+  kind: token
+  chains: [evm]
+when:
+  fact: token.is_honeypot
+  eq: true
+explain: Simulated sells fail, so buyers may be unable to exit.

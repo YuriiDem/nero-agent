@@ -1,0 +1,6 @@
+id: test.token.no_fixture
+title: Rule without a fixture
+severity: medium
+appliesTo: { kind: token }
+when: { fact: token.is_proxy, eq: true }
+explain: Test rule.

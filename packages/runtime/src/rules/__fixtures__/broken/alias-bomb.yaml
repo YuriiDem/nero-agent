@@ -1,0 +1,6 @@
+id: &id test.token.alias
+title: *id
+severity: medium
+appliesTo: { kind: token }
+when: { fact: token.is_proxy, eq: true }
+explain: Uses YAML aliases, which the loader rejects.

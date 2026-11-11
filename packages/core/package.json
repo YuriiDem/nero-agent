@@ -9,6 +9,19 @@
       "@nero-agent/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./shared": {
+      "@nero-agent/source": "./src/shared/index.ts",
+      "types": "./dist/shared/index.d.ts",
+      "default": "./dist/shared/index.js"
+    },
+    "./ports": {
+      "@nero-agent/source": "./src/ports/index.ts",
+      "types": "./dist/ports/index.d.ts",
+      "default": "./dist/ports/index.js"
     }
+  },
+  "dependencies": {
+    "zod": "4.6.7"
   }
 }

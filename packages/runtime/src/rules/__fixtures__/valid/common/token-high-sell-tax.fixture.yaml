@@ -1,0 +1,17 @@
+cases:
+  - name: sell tax 25%
+    subject: { kind: token, chain: solana }
+    facts:
+      token.sell_tax: 0.25
+    expect: fires
+  - name: both taxes low
+    subject: { kind: token, chain: bsc }
+    facts:
+      token.sell_tax: 0.02
+      token.buy_tax: 0.01
+    expect: silent
+  - name: only buy tax known and low
+    subject: { kind: token, chain: bsc }
+    facts:
+      token.buy_tax: 0.01
+    expect: unknown

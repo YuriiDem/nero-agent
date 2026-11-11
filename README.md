@@ -39,7 +39,7 @@ in `~/.nero/`.
 
 ## Status and roadmap
 
-Pre-alpha. Current milestone: M0 (repository bootstrap).
+Pre-alpha. Done: M0 (repository bootstrap), M1 (core domain and rule engine).
 
 - M1: core domain and rule engine
 - M2: CLI shell

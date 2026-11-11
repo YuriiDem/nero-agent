@@ -1,0 +1,14 @@
+cases:
+  - name: honeypot reported
+    subject: { kind: token, chain: base }
+    facts:
+      token.is_honeypot: true
+    expect: fires
+  - name: sells work
+    subject: { kind: token, chain: ethereum }
+    facts:
+      token.is_honeypot: false
+    expect: silent
+  - name: no honeypot data
+    subject: { kind: token, chain: ethereum }
+    expect: unknown

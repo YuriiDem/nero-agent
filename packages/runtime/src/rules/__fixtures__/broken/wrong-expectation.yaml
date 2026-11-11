@@ -1,0 +1,6 @@
+id: test.token.wrong_expectation
+title: Rule whose fixture is wrong
+severity: medium
+appliesTo: { kind: token }
+when: { fact: token.is_proxy, eq: true }
+explain: Test rule.
