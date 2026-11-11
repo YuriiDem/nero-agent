@@ -21,5 +21,14 @@ All notable changes to this project are documented here. The format follows
   - Guards: seed phrase / private key detector, untrusted-text sanitizer, spoof-proof data blocks, narration guard.
   - `NeroEvent` types for the CLI event stream.
   - Core subpath exports `./shared` and `./ports`; providers may import only those.
+- M2: CLI shell. `nero` starts an Ink TUI.
+  - Placeholder half-block pixel mascot with idle (blink) and thinking frames.
+  - Status header, scrolling transcript and input box with cursor editing.
+  - Slash commands `/help`, `/clear`, `/exit` with Tab completion and typo suggestions.
+  - Rendering of the `NeroEvent` stream.
+  - `nero --help` and `nero --version`. `NO_COLOR` is respected.
+- M2: seed phrases and private keys are blocked on paste and on submit; they are never echoed, stored or sent.
+- M2: runtime session seam (no-model stub reply), config in `~/.nero/config.json` (strict schema, atomic owner-only
+  writes, `NERO_HOME` override), and OS keychain secret store via `@napi-rs/keyring`.
 - M1: runtime YAML rule loader (aliases, duplicate keys and unknown tags rejected) and a fixture harness that
   requires every rule in `rules/` to ship with a `.fixture.yaml`.

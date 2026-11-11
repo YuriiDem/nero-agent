@@ -11,7 +11,7 @@ export default defineConfig({
   test: {
     projects: workspaces.map((root) => ({
       extends: true,
-      test: { name: root.split("/")[1] ?? root, root, include: ["src/**/*.test.ts"] },
+      test: { name: root.split("/")[1] ?? root, root, include: ["src/**/*.test.{ts,tsx}"] },
     })),
   },
 });
