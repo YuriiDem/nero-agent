@@ -4,15 +4,24 @@
   "private": true,
   "type": "module",
   "license": "MIT",
+  "bin": {
+    "nero": "./dist/main.js"
+  },
   "exports": {
     ".": {
-      "@nero-agent/source": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "@nero-agent/source": "./src/main.tsx",
+      "types": "./dist/main.d.ts",
+      "default": "./dist/main.js"
     }
   },
   "dependencies": {
     "@nero-agent/core": "workspace:*",
-    "@nero-agent/runtime": "workspace:*"
+    "@nero-agent/runtime": "workspace:*",
+    "ink": "8.0.0",
+    "react": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "ink-testing-library": "4.0.0"
   }
 }

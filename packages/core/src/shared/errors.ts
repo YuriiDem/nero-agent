@@ -4,7 +4,10 @@ export type NeroErrorCode =
   | "invalid_fact"
   | "source_failed"
   | "secret_detected"
-  | "narration_rejected";
+  | "narration_rejected"
+  | "invalid_config"
+  | "invalid_secret_name"
+  | "keychain_unavailable";
 
 export class NeroError extends Error {
   readonly code: NeroErrorCode;
